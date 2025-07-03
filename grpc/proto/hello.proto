@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./proto/hello;hello"; // kaha auto generate kiya jayega relative to app folder structure(PS E:\go tutorial\grpc>)
+
+message HelloRequest{
+  string SomeString = 1;
+}
+
+message HelloResponse{
+  string Reply = 1;
+}
+
+service Emaple {
+  rpc ServerReply(HelloRequest)returns (HelloResponse);
+}
